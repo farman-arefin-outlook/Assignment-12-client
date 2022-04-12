@@ -1,42 +1,49 @@
 import { Button } from 'bootstrap';
 import React from 'react';
-import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-
+import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import logo from '../../assets/logo-1.svg';
+import navBG from '../../assets/nav-bg.png';
+import navBG2 from '../../assets/nav-bg2.png';
 const Header = () => {
     return (
         <div>
-            <Navbar className="nav" bg="dark" variant="dark">
+            <Navbar fixed='' className="my-0 p-0 " style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
                 <Container>
-                    <Nav className="nav">
-                        <Nav.Link href="#shipping">Home</Nav.Link>
+                    <Nav>
+                        <Nav.Link href="#shipping">Shipping</Nav.Link>
                         <Nav.Link href="#faq">FAQ</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
                         <Nav.Link href="#track">Track Order</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+            <Navbar sticky='top' style={{ background: `url(${navBG2})` }} collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Container fluid>
+                    <Nav className="ms-auto align-items-center">
+                        <Nav.Link as={NavLink} to="/home" className="custom-logo">
+                            HOME
+                        </Nav.Link>
+
+                        <Nav.Link as={NavLink} to="/pages" className="custom-logo">
+                            PAGES
+                        </Nav.Link>
+
+                        <Nav.Link as={NavLink} to="/blog" className="custom-logo">
+                            BLOG
+                        </Nav.Link>
+                        <Nav.Link as={NavLink} to="/gallery" className="custom-logo">
+                            GALLERY
+                        </Nav.Link>
+                    </Nav>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                        <Nav className="m-5 p-5 my-lg-0 justify-content-center align-items-center"
+                            style={{ maxHeight: '100px' }}
+                            navbarScroll>
+                            <Navbar.Brand className="justify-content-center align-items-center ms-auto" href="#home"><img src={logo} width='200px' height='70px' className='align-items-center justify-content-center' alt="Logo" /></Navbar.Brand>
                         </Nav>
-                        <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
-                        </Nav>
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
