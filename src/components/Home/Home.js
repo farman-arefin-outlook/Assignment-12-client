@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Carousel, Col, Container, Row } from 'react-bootstrap';
-import { Fade } from 'react-reveal';
+import { Carousel, Col, Container, NavLink, Row } from 'react-bootstrap';
+import { Bounce, Fade } from 'react-reveal';
 
 import slider1 from '../../assets/slider1.jpg';
 import slider2 from '../../assets/slider2.png';
@@ -71,15 +71,38 @@ const Home = () => {
             </div>
             <div>
                 <Row>
-                    <Col xs='12' lg='4'>
-                        <div>
-                            <div>
-                                <img className='' src={banner1} alt="" />
-                            </div>
-                            <div>
-                                <Button variant='primary'></Button>
+                    <Col xs='12' lg='4'><div
+                        style={{
+                            background: `url(${banner1})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center center",
+                            backgroundSize: "cover",
+                            width: "100%",
+                        }}
+                    >
+                        <div
+                            className="d-flex justify-content-center align-items-center"
+                        >
+                            <div className="text-center my-5 py-5">
+                                <Bounce left cascade>
+                                    <h5 className="text-white">SingleTrack</h5>
+                                </Bounce>
+
+                                <Bounce right cascade>
+                                    <h5 className="text-white">Speed</h5>
+                                </Bounce>
+
+                                <Bounce>
+                                    <NavLink
+                                        to="/courses"
+                                        className="rounded-pill btn btn-primary fs-5"
+                                    >
+                                        View Services
+                                    </NavLink>
+                                </Bounce>
                             </div>
                         </div>
+                    </div >
                     </Col>
                     <Col xs='12' lg='4'><img className='' src={banner2} alt="" /></Col>
                     <Col xs='12' lg='4'><img className='' src={banner3} alt="" /></Col>

@@ -8,7 +8,7 @@ import navBG2 from '../../assets/nav-bg2.png';
 const Header = () => {
     return (
         <div>
-            <Navbar fixed='' className="my-0 p-0 " style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
+            <Navbar className="my-0 p-0 " style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
                 <Container>
                     <Nav>
                         <Nav.Link href="#shipping">Shipping</Nav.Link>
