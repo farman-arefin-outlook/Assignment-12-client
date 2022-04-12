@@ -71,7 +71,7 @@ const Home = () => {
             </div>
             <div>
                 <Row>
-                    <Col xs='12' lg='4'><div
+                    <Col xs='12' lg='4'><div className='m-0 p-0 fluid'
                         style={{
                             background: `url(${banner1})`,
                             backgroundRepeat: "no-repeat",
@@ -85,27 +85,80 @@ const Home = () => {
                         >
                             <div className="text-center my-5 py-5">
                                 <Bounce left cascade>
-                                    <h5 className="text-white">SingleTrack</h5>
+                                    <h2 className="text-white">SingleTrack</h2>
                                 </Bounce>
 
-                                <Bounce right cascade>
-                                    <h5 className="text-white">Speed</h5>
-                                </Bounce>
-
-                                <Bounce>
+                                {/* <Bounce>
                                     <NavLink
                                         to="/courses"
-                                        className="rounded-pill btn btn-primary fs-5"
+                                        className="rounded-pill btn btn-primary"
                                     >
                                         View Services
                                     </NavLink>
-                                </Bounce>
+                                </Bounce> */}
                             </div>
                         </div>
                     </div >
                     </Col>
-                    <Col xs='12' lg='4'><img className='' src={banner2} alt="" /></Col>
-                    <Col xs='12' lg='4'><img className='' src={banner3} alt="" /></Col>
+                    <Col xs='12' lg='4'><div
+                        style={{
+                            background: `url(${banner2})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center center",
+                            backgroundSize: "cover",
+                            width: "100%",
+                        }}
+                    >
+                        <div
+                            className="d-flex justify-content-center align-items-center"
+                        >
+                            <div className="text-center my-5 py-5">
+                                <Bounce right cascade>
+                                    <h2 className="text-white">Trail Power</h2>
+                                </Bounce>
+
+                                {/* <Bounce>
+                                    <NavLink
+                                        to="/courses"
+                                        className="rounded-pill btn btn-primary"
+                                    >
+                                        View Services
+                                    </NavLink>
+                                </Bounce> */}
+                            </div>
+                        </div>
+                    </div >
+                    </Col>
+                    <Col xs='12' lg='4'>
+                        <div
+                            style={{
+                                background: `url(${banner3})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "center center",
+                                backgroundSize: "cover",
+                                width: "100%",
+                            }}
+                        >
+                            <div
+                                className="d-flex justify-content-center align-items-center"
+                            >
+                                <div className="text-center my-5 py-5">
+                                    <Bounce left cascade>
+                                        <h2 className="text-white">Road Bikes</h2>
+                                    </Bounce>
+
+                                    {/* <Bounce>
+                                    <NavLink
+                                        to="/courses"
+                                        className="rounded-pill btn btn-primary"
+                                    >
+                                        View Services
+                                    </NavLink>
+                                </Bounce> */}
+                                </div>
+                            </div>
+                        </div >
+                    </Col>
                 </Row>
             </div>
         </div>
