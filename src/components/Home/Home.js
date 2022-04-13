@@ -100,7 +100,7 @@ const Home = () => {
                                     <h2 className="text-white">SingleTrack</h2>
                                     <p className='text-white'><span style={{ color: "orange" }}>THE ALL-NEW </span>TRANCE ADVANCE PRO 29 SERIES</p>
                                 </Bounce>
-                                <button className='btn btn-primary'>Learn More</button>
+                                <button className='link-button'>Learn More</button>
                             </div>
                         </div>
                     </div >
@@ -123,7 +123,7 @@ const Home = () => {
                                     <h2 className="text-white">Trail Power</h2>
                                     <p className='text-white'><span style={{ color: "orangered" }}>25% OFF </span>TRANCE X ADVANCE E+</p>
                                 </Bounce>
-                                <button className='btn btn-primary'>Discover More</button>
+                                <button className='shop-now-button'>Discover More</button>
                             </div>
                         </div>
                     </div >
@@ -147,7 +147,7 @@ const Home = () => {
                                         <p className='text-white'><span style={{ color: 'orange' }}>NEW STYLE</span> JUST GOT IT</p>
                                     </Bounce>
 
-                                    <button className='btn btn-primary'>Shop Now</button>
+                                    <button className='link-button'>Shop Now</button>
                                 </div>
                             </div>
                         </div >
@@ -155,7 +155,7 @@ const Home = () => {
                 </Row>
             </div>
             {/* This is special features service */}
-            <div className="text-center text-black gfont mt-5">
+            <div className="text-center text-black gfont mt-5 mb-5">
                 <Slide left>
                     <h6 className='mt-5 mb-5' style={{ color: "orangered" }}>YOUR RIDE START HERE</h6>
                 </Slide>
@@ -197,24 +197,56 @@ const Home = () => {
                 </div>
             </div>
             {/* This categories 2 */}
-            <div>
-                <Row>
-                    <Col>
-                        <div style={{
+            <div className='mt-5'>
+                <Row className='g-0'>
+                    <Col xs='12' lg='6'><div
+                        style={{
                             background: `url(${hbanner1})`,
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center center",
                             backgroundSize: "cover",
                             width: "100%",
-                        }}>
-                            <h1>Kides Bikes</h1>
-                            <p>Close-out prizing on dozens of products.</p>
+                            height: "90vh"
+
+                        }} className='mx-0'
+                    >
+                        <div
+                            className="d-flex justify-content-center align-items-center"
+                        >
+                            <div className="text-center my-5 py-5 align-items-center justify-content-center">
+                                <Bounce left cascade>
+                                    <h1 className='text-black gfont'>KIDS BIKES</h1>
+                                    <p className='text-dark'>Close-out pricing on dozens products.</p>
+
+                                </Bounce>
+                                <button className='shop-now-button'>Shop Now</button>
+                            </div>
                         </div>
+                    </div >
                     </Col>
-                    <Col>
-                        <div style={{ background: `url(${hbanner2})` }}>
-                            <h1>Accessories</h1>
+                    <Col xs='12' lg='6'><div
+                        style={{
+                            background: `url(${hbanner2})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center center",
+                            backgroundSize: "cover",
+                            width: "100%",
+                            height: "90vh"
+                        }}
+                        className='mx-0'
+                    >
+                        <div
+                            className="d-flex justify-content-center align-items-center"
+                        >
+                            <div className="text-center my-5 py-5">
+                                <Bounce right cascade>
+                                    <h1 className='text-black gfont align-items-center justify-content-center'>ACCESSORIES</h1>
+                                    <p>Close-out pricing on dozens products.</p>
+                                </Bounce>
+                                <button className='shop-now-button'>Shop Now</button>
+                            </div>
                         </div>
+                    </div >
                     </Col>
                 </Row>
             </div>
