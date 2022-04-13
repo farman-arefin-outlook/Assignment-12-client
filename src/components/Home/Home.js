@@ -20,6 +20,9 @@ import cimg3 from '../../assets/cycle-icon.jpg';
 import hbanner1 from '../../assets/h2-banner2.jpg';
 import hbanner2 from '../../assets/h2-banner1.jpg';
 
+
+import bannerS2 from '../../assets/banner2.jpg';
+
 const Home = () => {
     return (
         <div className='gfont'>
@@ -97,7 +100,7 @@ const Home = () => {
                         >
                             <div className="text-center my-5 py-5">
                                 <Bounce left cascade>
-                                    <h2 className="text-white">SingleTrack</h2>
+                                    <h2 className="text-white">Single Track</h2>
                                     <p className='text-white'><span style={{ color: "orange" }}>THE ALL-NEW </span>TRANCE ADVANCE PRO 29 SERIES</p>
                                 </Bounce>
                                 <button className='link-button'>Learn More</button>
@@ -123,7 +126,7 @@ const Home = () => {
                                     <h2 className="text-white">Trail Power</h2>
                                     <p className='text-white'><span style={{ color: "orangered" }}>25% OFF </span>TRANCE X ADVANCE E+</p>
                                 </Bounce>
-                                <button className='shop-now-button'>Discover More</button>
+                                <button className='link-button'>Discover More</button>
                             </div>
                         </div>
                     </div >
@@ -206,8 +209,8 @@ const Home = () => {
                             backgroundPosition: "center center",
                             backgroundSize: "cover",
                             width: "100%",
-                            height: "90vh"
-
+                            height: "90vh",
+                            marginTop: "150px",
                         }} className='mx-0'
                     >
                         <div
@@ -216,7 +219,7 @@ const Home = () => {
                             <div className="text-center my-5 py-5 align-items-center justify-content-center">
                                 <Bounce left cascade>
                                     <h1 className='text-black gfont'>KIDS BIKES</h1>
-                                    <p className='text-dark'>Close-out pricing on dozens products.</p>
+                                    <p style={{ color: "GrayText" }}>Close-out pricing on dozens products.</p>
 
                                 </Bounce>
                                 <button className='shop-now-button'>Shop Now</button>
@@ -231,9 +234,10 @@ const Home = () => {
                             backgroundPosition: "center center",
                             backgroundSize: "cover",
                             width: "100%",
-                            height: "90vh"
+                            height: "90vh",
+                            marginTop: "150px"
                         }}
-                        className='mx-0'
+                        className='mx-0 text-center'
                     >
                         <div
                             className="d-flex justify-content-center align-items-center"
@@ -241,7 +245,7 @@ const Home = () => {
                             <div className="text-center my-5 py-5">
                                 <Bounce right cascade>
                                     <h1 className='text-black gfont align-items-center justify-content-center'>ACCESSORIES</h1>
-                                    <p>Close-out pricing on dozens products.</p>
+                                    <p style={{ color: 'GrayText' }}>Close-out pricing on dozens products.</p>
                                 </Bounce>
                                 <button className='shop-now-button'>Shop Now</button>
                             </div>
@@ -249,6 +253,56 @@ const Home = () => {
                     </div >
                     </Col>
                 </Row>
+            </div>
+
+            {/* This is banner section 2 */}
+
+            <div style={{
+                background: `url(${bannerS2})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "120vh",
+                padding: "140px 30px",
+                marginBottom: "100px"
+            }}>
+                <div>
+                    <Row>
+                        <Col xs='12' lg='6'>
+                            <p style={{ color: "orangered" }}>YOUR RIDE START HERE.</p>
+                            <h1 className='text-white'>Bike Services & Repair</h1>
+                            <div className='mb-5'>
+                                <Row>
+                                    <Col>
+                                        <div className='mt-5'>
+                                            <h5 className='text-white'><span style={{ color: "orangered" }}>01.</span> Tunner - up & Builds </h5>
+                                            <p style={{ color: "GrayText" }}>Vel illum dolore eu feugiat nulla facilisis at vero eros et accu qui blandit</p>
+                                        </div>
+                                        <div className='mt-5'>
+                                            <h5 className='text-white'><span style={{ color: "orangered" }}>03.</span>  Personal Bike Fit </h5>
+                                            <p style={{ color: "GrayText" }}>Vel illum dolore eu feugiat nulla facilisis at vero eros et accu qui blandit</p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+                                        <div className='mt-5'>
+                                            <h5 className='text-white'><span style={{ color: "orangered" }}>02.</span>  Adjust and install </h5>
+                                            <p style={{ color: "GrayText" }}>Vel illum dolore eu feugiat nulla facilisis at vero eros et accu qui blandit</p>
+                                        </div>
+                                        <div className='mt-5'>
+                                            <h5 className='text-white'><span style={{ color: "orangered" }}>04.</span>  Free delivery </h5>
+                                            <p style={{ color: "GrayText" }}>Vel illum dolore eu feugiat nulla facilisis at vero eros et accu qui blandit</p>
+                                        </div>
+                                    </Col>
+                                </Row>
+                                <button className='explore-products mt-5'>Explore Products</button>
+                            </div>
+                        </Col>
+                        <Col xs='12' lg='6'></Col>
+                    </Row>
+                </div>
+
+
             </div>
         </div >
 
