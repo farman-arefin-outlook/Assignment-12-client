@@ -1,0 +1,24 @@
+.orange {
+    color: orangered;
+}
+
+.gfont {
+    font-family: 'Anton',
+        sans-serif;
+}
+
+.gfontH {
+    font-family: 'Anton',
+        sans-serif;
+    font-family: 'Teko',
+        sans-serif;
+}
+
+.pic img {
+    height: 160px;
+    width: 100px;
+
+    align-items: center;
+    justify-content: center;
+    margin-left: 190px;
+}

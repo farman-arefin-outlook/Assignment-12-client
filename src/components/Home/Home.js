@@ -1,19 +1,28 @@
 import React from 'react';
-import { Carousel, Col, Container, NavLink, Row } from 'react-bootstrap';
-import { Bounce, Fade } from 'react-reveal';
+import { Card, CardGroup, Carousel, Col, Container, NavLink, Row } from 'react-bootstrap';
+import { Bounce, Fade, Slide } from 'react-reveal';
 
 import slider1 from '../../assets/slider1.jpg';
-import slider2 from '../../assets/slider2.png';
+//import slider2 from '../../assets/slider2.png';
 import slider3 from '../../assets/slider3.jpg';
 
 import banner1 from '../../assets/h1-banner1.jpg';
 import banner2 from '../../assets/h1-banner2.jpg';
 import banner3 from '../../assets/h1-banner3.jpg';
-
+import '../Home/Home.css';
 import rev from '../../assets/rev_home1.jpg';
+
+import cimg1 from '../../assets/helmet1.jpg';
+import cimg2 from '../../assets/bycle-wheel.jpg';
+import cimg3 from '../../assets/cycle-icon.jpg';
+
+
+import hbanner1 from '../../assets/h2-banner2.jpg';
+import hbanner2 from '../../assets/h2-banner1.jpg';
+
 const Home = () => {
     return (
-        <div>
+        <div className='gfont'>
             <div>
                 <Carousel>
                     <Carousel.Item>
@@ -69,16 +78,19 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <div>
-                <Row>
-                    <Col xs='12' lg='4'><div className='m-0 p-0 fluid'
+
+            {/* This is gutter section */}
+            <div className='mb-5'>
+                <Row className='m-0 g-0'>
+                    <Col xs='12' lg='4'><div
                         style={{
                             background: `url(${banner1})`,
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center center",
                             backgroundSize: "cover",
                             width: "100%",
-                        }}
+
+                        }} className='mx-0'
                     >
                         <div
                             className="d-flex justify-content-center align-items-center"
@@ -86,16 +98,9 @@ const Home = () => {
                             <div className="text-center my-5 py-5">
                                 <Bounce left cascade>
                                     <h2 className="text-white">SingleTrack</h2>
+                                    <p className='text-white'><span style={{ color: "orange" }}>THE ALL-NEW </span>TRANCE ADVANCE PRO 29 SERIES</p>
                                 </Bounce>
-
-                                {/* <Bounce>
-                                    <NavLink
-                                        to="/courses"
-                                        className="rounded-pill btn btn-primary"
-                                    >
-                                        View Services
-                                    </NavLink>
-                                </Bounce> */}
+                                <button className='btn btn-primary'>Learn More</button>
                             </div>
                         </div>
                     </div >
@@ -108,6 +113,7 @@ const Home = () => {
                             backgroundSize: "cover",
                             width: "100%",
                         }}
+                        className='mx-0'
                     >
                         <div
                             className="d-flex justify-content-center align-items-center"
@@ -115,16 +121,9 @@ const Home = () => {
                             <div className="text-center my-5 py-5">
                                 <Bounce right cascade>
                                     <h2 className="text-white">Trail Power</h2>
+                                    <p className='text-white'><span style={{ color: "orangered" }}>25% OFF </span>TRANCE X ADVANCE E+</p>
                                 </Bounce>
-
-                                {/* <Bounce>
-                                    <NavLink
-                                        to="/courses"
-                                        className="rounded-pill btn btn-primary"
-                                    >
-                                        View Services
-                                    </NavLink>
-                                </Bounce> */}
+                                <button className='btn btn-primary'>Discover More</button>
                             </div>
                         </div>
                     </div >
@@ -145,23 +144,82 @@ const Home = () => {
                                 <div className="text-center my-5 py-5">
                                     <Bounce left cascade>
                                         <h2 className="text-white">Road Bikes</h2>
+                                        <p className='text-white'><span style={{ color: 'orange' }}>NEW STYLE</span> JUST GOT IT</p>
                                     </Bounce>
 
-                                    {/* <Bounce>
-                                    <NavLink
-                                        to="/courses"
-                                        className="rounded-pill btn btn-primary"
-                                    >
-                                        View Services
-                                    </NavLink>
-                                </Bounce> */}
+                                    <button className='btn btn-primary'>Shop Now</button>
                                 </div>
                             </div>
                         </div >
                     </Col>
                 </Row>
             </div>
-        </div>
+            {/* This is special features service */}
+            <div className="text-center text-black gfont mt-5">
+                <Slide left>
+                    <h6 className='mt-5 mb-5' style={{ color: "orangered" }}>YOUR RIDE START HERE</h6>
+                </Slide>
+
+                <Slide right>
+                    <h1 className='gfont mb-5' style={{ color: "black" }}>Our Facilities & Features</h1>
+                </Slide>
+
+                <div className='pic'>
+                    <CardGroup>
+                        <Card>
+                            <Card.Img variant="top" src={cimg1} />
+                            <Card.Body>
+                                <Card.Title>Complete Overhaul</Card.Title>
+                                <Card.Text>
+                                    We provide a wide range of support for special gear and brake control.In any case you can visit our shop.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src={cimg2} />
+                            <Card.Body>
+                                <Card.Title>Custom Parts & Accessories</Card.Title>
+                                <Card.Text>
+                                    We provide a wide range of support for special gear and brake control.In any case you can visit our shop.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src={cimg3} />
+                            <Card.Body>
+                                <Card.Title>Bike Fitting & Delivery</Card.Title>
+                                <Card.Text>
+                                    We provide a wide range of support for special gear and brake control.In any case you can visit our shop.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </CardGroup>
+                </div>
+            </div>
+            {/* This categories 2 */}
+            <div>
+                <Row>
+                    <Col>
+                        <div style={{
+                            background: `url(${hbanner1})`,
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center center",
+                            backgroundSize: "cover",
+                            width: "100%",
+                        }}>
+                            <h1>Kides Bikes</h1>
+                            <p>Close-out prizing on dozens of products.</p>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div style={{ background: `url(${hbanner2})` }}>
+                            <h1>Accessories</h1>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+        </div >
+
     );
 };
 

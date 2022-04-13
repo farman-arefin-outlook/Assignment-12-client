@@ -1,13 +1,15 @@
-import { Button } from 'bootstrap';
+
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import logo from '../../assets/logo-1.svg';
 import navBG from '../../assets/nav-bg.png';
 import navBG2 from '../../assets/nav-bg2.png';
+
+import '../Home/Home.css';
 const Header = () => {
     return (
-        <div>
+        <div className='gfont'>
             <Navbar className="my-0 p-0 " style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
                 <Container>
                     <Nav>
