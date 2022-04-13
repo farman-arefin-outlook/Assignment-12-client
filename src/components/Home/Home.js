@@ -270,8 +270,12 @@ const Home = () => {
                 <div>
                     <Row>
                         <Col xs='12' lg='6'>
-                            <p style={{ color: "orangered" }}>YOUR RIDE START HERE.</p>
-                            <h1 className='text-white'>Bike Services & Repair</h1>
+                            <Fade bottom>
+                                <p style={{ color: "orangered" }}>YOUR RIDE START HERE.</p>
+                            </Fade>
+                            <Fade bottom>
+                                <h1 className='text-white'>Bike Services & Repair</h1>
+                            </Fade>
                             <div className='mb-5'>
                                 <Row>
                                     <Col>
