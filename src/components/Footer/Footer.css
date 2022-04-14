@@ -1,14 +1,13 @@
 .footer-link a {
     text-decoration: none;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    line-height: 40px;
+    font-size: 15px;
+    color: gray;
+    font-weight: 300;
+    line-height: 10px;
 }
 
 .footer-color {
-    background: rgb(9, 5, 82);
-    background: linear-gradient(90deg, rgba(9, 5, 82, 1) 100%, rgba(5, 5, 57, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    background: black;
 }
 
 .copyright {
@@ -18,4 +17,31 @@
 .dropdown-menu.show {
     left: -126px;
     padding: 11px;
+}
+
+.footer-link a:hover {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fe5915;
+    font-weight: 300;
+    line-height: 10px;
+}
+
+.footer-background {
+    background-image: url("../../assets/Footer_BG.jpg");
+    background-repeat: no-repeat;
+    width: 98vw;
+    height: 98vh;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.pay-img {
+    height: 120px;
+    width: 220px;
+}
+
+.footer-padding {
+    padding-bottom: 500px;
 }
