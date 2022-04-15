@@ -61,10 +61,6 @@
     margin-top: 0;
     margin-bottom: 100px;
     padding: 140px 30px;
-    width: calc(100vw - var(--scroll-bar)) !important;
-    margin-left: calc(-50vw + 50% + (var(--scroll-bar)/2)) !important;
-    margin-right: calc(-50vw + 50% + (var(--scroll-bar)/2)) !important;
-    left: 0 !important;
 }
 
 .explore-products {
@@ -87,4 +83,23 @@
     padding: 20px 40px;
     border: none;
     color: black;
+}
+
+.subscribe {
+    background-image: url("../../assets/h3-banner2.png");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+
+.car-back {
+    background-image: url("../../assets/rev_home1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100% !important;
+    display: block;
 }

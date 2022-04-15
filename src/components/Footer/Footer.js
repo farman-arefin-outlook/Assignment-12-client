@@ -2,19 +2,53 @@ import React from "react";
 import "./Footer.css";
 import payment from "./../../assets/payment.png";
 import FooterBg from './../../assets/Footer_BG.jpg';
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, FormControl, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faEnvelope,
     faPhone,
     faMapMarkerAlt,
+    faMessage,
+    faEnvelopeCircleCheck
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+
 
 const Footer = () => {
     return (
         <div className="text-white">
             <div className="py-4" style={{ background: `url(${FooterBg})` }}>
+                <Container>
+                    <Row className="footer-head gfont">
+                        <Col lg='4' xs='12' className="border-color">
+                            <FontAwesomeIcon className="icon-size" icon={faMessage} />
+                            <h2>NEED HELP?</h2>
+                            <p style={{ color: "GrayText" }}>Our dedicated team are here to help.</p>
+                            <button className="shop-now-button">CHAT NOW</button>
+                        </Col>
+                        <Col lg='4' xs='12' className="border-color">
+                            <FontAwesomeIcon className="icon-size" icon={faPhone} />
+                            <h2>CALL US</h2>
+                            <p style={{ color: "GrayText" }}>Talk to our team 24/7 about your needs.</p>
+                            <h2 style={{ color: "orangered" }}>666-880-33388</h2>
+                        </Col>
+                        <Col lg='4' xs='12' className="border-color">
+                            <FontAwesomeIcon className="icon-size" icon={faEnvelopeCircleCheck} />
+                            <h2>SUBSCRIBE US</h2>
+                            <p style={{ color: "GrayText" }}>And get the scoop on sales & new gear!</p>
+                            <Form className="d-flex">
+                                <FormControl
+                                    type="search"
+                                    placeholder="Search"
+                                    className="me-2"
+                                    aria-label="Search"
+                                />
+                                <button className="btn btn-danger">Search</button>
+                            </Form>
+                        </Col>
+                    </Row>
+
+                </Container>
                 <Container>
                     <Row>
                         <Col md={2}>
@@ -104,15 +138,19 @@ const Footer = () => {
                             </ul>
                         </Col>
                         <Col md={4}>
-
+                            <div>
+                                <h5 className="gfontH">CONNECT WITH US</h5>
+                                <FontAwesomeIcon icon={faEnvelope} /> <FontAwesomeIcon className="px-3" icon={faPhone} />
+                                <FontAwesomeIcon className="px-2" icon={faMapMarkerAlt} />
+                            </div>
                             <img src={payment} alt="" />
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <hr className="m-0 p-0" />
-            <p className="text-center m-0 py-3 copyright footer-color">
-                Copyright © All Right Reserved by Farman Arefin Tamim Community in 2021.
+            <p className="text-start px-5 m-0 py-3 footer-color gfontH">
+                Copyright © 2022 <span style={{ color: "orangered" }}>Ridez.</span> All Rights Reserved
+                <p className="text-end"> Designed By F.A. Tamim</p>
             </p>
         </div>
     );

@@ -5,18 +5,30 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import logo from '../../assets/logo-1.svg';
 import navBG from '../../assets/nav-bg.png';
 import navBG2 from '../../assets/nav-bg2.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faEnvelope,
+    faPhone,
+    faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 import '../Home/Home.css';
 const Header = () => {
     return (
         <div className='gfont'>
-            <Navbar className="my-0 p-0 " style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
+            <Navbar className="my-0 p-0 gfontH" style={{ background: `url(${navBG})` }} bg="dark" variant="dark">
                 <Container>
                     <Nav>
                         <Nav.Link href="#shipping">Shipping</Nav.Link>
                         <Nav.Link href="#faq">FAQ</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
                         <Nav.Link href="#track">Track Order</Nav.Link>
+                    </Nav>
+                    <Nav className='text-end'>
+                        <Nav.Link href="#track">Follow Us : </Nav.Link>
+                        <Nav.Link href="#track"><FontAwesomeIcon icon={faEnvelope} /></Nav.Link>
+                        <Nav.Link href="#track"><FontAwesomeIcon icon={faPhone} /></Nav.Link>
+                        <Nav.Link href="#track"><FontAwesomeIcon icon={faMapMarkerAlt} /></Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

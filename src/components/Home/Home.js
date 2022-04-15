@@ -3,7 +3,7 @@ import { Card, CardGroup, Carousel, Col, Container, NavLink, Row } from 'react-b
 import { Bounce, Fade, Slide } from 'react-reveal';
 
 import slider1 from '../../assets/slider1.jpg';
-//import slider2 from '../../assets/slider2.png';
+import slider2 from '../../assets/slider2.png';
 import slider3 from '../../assets/slider3.jpg';
 
 import banner1 from '../../assets/h1-banner1.jpg';
@@ -22,6 +22,9 @@ import hbanner2 from '../../assets/h2-banner1.jpg';
 
 
 import bannerS2 from '../../assets/banner2.jpg';
+
+import h3banner1 from '../../assets/h3-banner1.png';
+import h3banner2 from '../../assets/h3-banner2.png';
 
 const Home = () => {
     return (
@@ -47,11 +50,22 @@ const Home = () => {
 
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                            className="d-flex w-100"
-                            src={rev}
-                            alt="Second slide"
-                        />
+                        <Row className='car-back d-flex justify-content-center'>
+                            <Col>
+                                <div className='w-50'>
+                                    <p>ROAD RANGE 2022</p>
+                                    <h1>Vanquish Comp Carbon</h1>
+                                    <h6>$1195.00</h6>
+                                    <div className='d-flex'>
+                                        <button>SHOP NOW</button>
+                                        <button>EXPLORE PRODUCTS</button>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col>
+                                <img src={slider2} alt="" />
+                            </Col>
+                        </Row>
                         <Carousel.Caption>
                             <Fade bottom>
                                 <span>FOX SERIES X</span>
@@ -305,8 +319,34 @@ const Home = () => {
                         <Col xs='12' lg='6'></Col>
                     </Row>
                 </div>
+            </div>
 
-
+            <div className='subscribe mb-5'>
+                <div>
+                    <img style={{ marginTop: '-350px' }} src={h3banner1} alt="" />
+                </div>
+                <div>
+                    <Carousel>
+                        <Slide right>
+                            <div>
+                                <h1>Slide 1</h1>
+                                <p>Slide Description</p>
+                            </div>
+                        </Slide>
+                        <Slide right>
+                            <div>
+                                <h1>Slide 2</h1>
+                                <p>Slide Description</p>
+                            </div>
+                        </Slide>
+                        <Slide right>
+                            <div>
+                                <h1>Slide 3</h1>
+                                <p>Slide Description</p>
+                            </div>
+                        </Slide>
+                    </Carousel>
+                </div>
             </div>
         </div >
 
