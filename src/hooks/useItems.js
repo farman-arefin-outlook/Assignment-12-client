@@ -7,7 +7,7 @@ const useItems = () => {
     const size = 9;
     useEffect(() => {
         fetch(
-            `https://travel-reach.herokuapp.com/courses?size=${size}&&page=${currentPage}`
+            `http://localhost:5000?size=${size}&&page=${currentPage}`
         )
             .then((res) => res.json())
             .then((data) => {

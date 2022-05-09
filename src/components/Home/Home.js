@@ -25,8 +25,11 @@ import bannerS2 from '../../assets/banner2.jpg';
 
 import h3banner1 from '../../assets/h3-banner1.png';
 import h3banner2 from '../../assets/h3-banner2.png';
+import useAuth from '../../hooks/useAuth';
+import Item from '../Item/Item';
 
 const Home = () => {
+    const { items } = useAuth();
     return (
         <div className='gfont'>
             <div>
@@ -321,31 +324,19 @@ const Home = () => {
                 </div>
             </div>
 
+            <Container>
+                <div className="my-3 d-flex flex-wrap justify-content-between">
+                    <Row>
+                        {items.slice(0, 6)?.map((item) => (
+                            <Item key={item.key} item={item} />
+                        ))}
+                    </Row>
+                </div>
+            </Container>
+
             <div className='subscribe mb-5'>
                 <div>
                     <img style={{ marginTop: '-350px' }} src={h3banner1} alt="" />
-                </div>
-                <div>
-                    <Carousel>
-                        <Slide right>
-                            <div>
-                                <h1>Slide 1</h1>
-                                <p>Slide Description</p>
-                            </div>
-                        </Slide>
-                        <Slide right>
-                            <div>
-                                <h1>Slide 2</h1>
-                                <p>Slide Description</p>
-                            </div>
-                        </Slide>
-                        <Slide right>
-                            <div>
-                                <h1>Slide 3</h1>
-                                <p>Slide Description</p>
-                            </div>
-                        </Slide>
-                    </Carousel>
                 </div>
             </div>
         </div >
