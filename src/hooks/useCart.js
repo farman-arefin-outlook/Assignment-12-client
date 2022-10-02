@@ -7,7 +7,7 @@ const useCart = () => {
     const [selecteditem, setSelecteditem] = useState([]);
 
     useEffect(() => {
-        fetch(`https://travel-reach.herokuapp.com/cart/${uid}`)
+        fetch(`https://localhost:5000/cart/${uid}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.length) {
@@ -29,7 +29,7 @@ const useCart = () => {
         if (isHave) {
             alert("Service has been already selected!");
         } else {
-            fetch("https://travel-reach.herokuapp.com/item/add", {
+            fetch("https://localhost:5000/item/add", {
                 method: "post",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(item),
@@ -47,7 +47,7 @@ const useCart = () => {
     function remove(id) {
         const confirmation = window.confirm("Are you sure to confirm!!");
         if (confirmation) {
-            fetch(`https://travel-reach.herokuapp.com/delete/${id}`, {
+            fetch(`https://localhost:5000/delete/${id}`, {
                 method: "delete",
             })
                 .then((res) => res.json())
